@@ -28,7 +28,7 @@ module SimpleForm
 
           build_hidden_field_for_checkbox +
             @builder.label(label_target, html_options) {
-              build_check_box_without_hidden_field(merged_input_options) + label_text + "<span></span>"
+              build_check_box_without_hidden_field(merged_input_options) + label_text + "<span></span>".html_safe
             }
         else
           input(wrapper_options) + label(wrapper_options)
